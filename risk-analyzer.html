@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Cyber Risk Analyzer</title>
+
+<link rel="stylesheet"
+href="../css/style.css">
+
+</head>
+
+<body>
+
+<h1>
+
+🛡️ Cyber Security Risk Analyzer
+
+</h1>
+<div class="password-box">
+
+<h2>Answer Security Questions</h2>
+
+<p>Do you use Antivirus?</p>
+
+<select id="antivirus">
+
+<option value="0">No</option>
+
+<option value="1">Yes</option>
+
+</select>
+
+<br><br>
+
+<p>Do you use MFA?</p>
+
+<select id="mfa">
+
+<option value="0">No</option>
+
+<option value="1">Yes</option>
+
+</select>
+
+<br><br>
+
+<p>Do you update software regularly?</p>
+
+<select id="update">
+
+<option value="0">No</option>
+
+<option value="1">Yes</option>
+
+</select>
+
+<br><br>
+
+<button onclick="analyzeRisk()">
+
+Analyze Risk
+
+</button>
+
+<h3 id="riskResult"></h3>
+<h3 id="securityScore"></h3>
+
+<div class="progress-container">
+
+<div id="progress-bar">
+
+</div>
+
+</div>
+
+<h3 id="recommendation"></h3>
+
+</div>
+<script src="../js/main.js"></script>
+
+</body>
+
+</html>

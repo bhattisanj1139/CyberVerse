@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Cyber Security Quiz</title>
+
+<style>
+
+body{
+background:#050816;
+color:white;
+font-family:Arial;
+padding:40px;
+}
+
+h1{
+text-align:center;
+color:cyan;
+text-shadow:0 0 15px cyan;
+}
+
+.quiz-box{
+
+max-width:800px;
+margin:auto;
+
+background:#111;
+
+padding:30px;
+
+border-radius:15px;
+
+border:2px solid cyan;
+
+}
+
+.question{
+
+margin-top:25px;
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:12px 25px;
+
+background:cyan;
+
+border:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+border-radius:8px;
+
+}
+
+#result{
+
+margin-top:25px;
+
+font-size:25px;
+
+font-weight:bold;
+
+color:lime;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>📝 Cyber Security Quiz</h1>
+
+<div class="quiz-box">
+
+<div class="question">
+
+<h3>1. What is Phishing?</h3>
+
+<input type="radio" name="q1" value="a">
+Fake Email Attack
+
+<br>
+
+<input type="radio" name="q1" value="b">
+Operating System
+
+</div>
+
+<div class="question">
+
+<h3>2. Strong Password should contain?</h3>
+
+<input type="radio" name="q2" value="a">
+Only Numbers
+
+<br>
+
+<input type="radio" name="q2" value="b">
+Letters, Numbers & Symbols
+
+</div>
+
+<div class="question">
+
+<h3>3. Linux was created by?</h3>
+
+<input type="radio" name="q3" value="a">
+Linus Torvalds
+
+<br>
+
+<input type="radio" name="q3" value="b">
+Bill Gates
+
+</div>
+
+<button onclick="checkQuiz()">
+
+Submit Quiz
+
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function checkQuiz(){
+
+let score=0;
+
+if(document.querySelector('input[name="q1"]:checked')?.value=="a")
+score++;
+
+if(document.querySelector('input[name="q2"]:checked')?.value=="b")
+score++;
+
+if(document.querySelector('input[name="q3"]:checked')?.value=="a")
+score++;
+
+document.getElementById("result").innerHTML=
+
+"🏆 Your Score : "+score+"/3";
+
+}
+
+</script>
+
+</body>
+
+</html>

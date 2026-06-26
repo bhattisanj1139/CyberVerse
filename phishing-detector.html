@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Phishing Detector</title>
+
+<style>
+
+body{
+background:#050816;
+font-family:Arial,sans-serif;
+color:white;
+text-align:center;
+padding:50px;
+}
+
+h1{
+color:cyan;
+text-shadow:0 0 15px cyan;
+}
+
+textarea{
+
+width:80%;
+height:200px;
+
+padding:15px;
+
+font-size:18px;
+
+border-radius:10px;
+
+border:2px solid cyan;
+
+background:#111;
+
+color:white;
+
+}
+
+button{
+
+margin-top:20px;
+
+padding:12px 25px;
+
+background:cyan;
+
+border:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+border-radius:8px;
+
+}
+
+#result{
+
+margin-top:25px;
+
+font-size:24px;
+
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>📧 Phishing Email Detector</h1>
+
+<p>Paste an email message below:</p>
+
+<textarea id="email"></textarea>
+
+<br>
+
+<button onclick="checkEmail()">
+Analyze Email
+</button>
+
+<div id="result"></div>
+
+<script>
+
+function checkEmail(){
+
+let email =
+document.getElementById("email").value.toLowerCase();
+
+let result =
+document.getElementById("result");
+
+if(
+email.includes("urgent") ||
+email.includes("verify account") ||
+email.includes("click here") ||
+email.includes("free money") ||
+email.includes("bank password")
+){
+
+result.innerHTML =
+"⚠️ Phishing Email Detected";
+
+result.style.color="red";
+
+}
+
+else{
+
+result.innerHTML =
+"✅ Email Looks Safe";
+
+result.style.color="lime";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

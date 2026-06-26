@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CyberVerse Attack Lab</title>
+
+<style>
+
+body{
+background:#050816;
+font-family:Arial;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+h1{
+color:cyan;
+text-shadow:0 0 15px cyan;
+}
+
+.attack-buttons{
+margin-top:30px;
+}
+
+.attack-buttons button{
+
+padding:12px 20px;
+margin:10px;
+
+background:cyan;
+border:none;
+
+font-size:16px;
+font-weight:bold;
+
+cursor:pointer;
+
+border-radius:8px;
+
+}
+
+.simulation{
+
+margin-top:40px;
+
+background:#111;
+
+padding:30px;
+
+border:2px solid cyan;
+
+border-radius:15px;
+
+max-width:900px;
+
+margin-left:auto;
+margin-right:auto;
+
+}
+
+#result{
+
+font-size:22px;
+
+line-height:2;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>⚔️ CyberVerse Attack Lab</h1>
+
+<p>Select an attack to view simulation</p>
+
+<div class="attack-buttons">
+
+<button onclick="phishing()">
+Phishing Attack
+</button>
+
+<button onclick="dos()">
+DOS Attack
+</button>
+
+<button onclick="ddos()">
+DDOS Attack
+</button>
+
+<button onclick="passwordAttack()">
+Password Attack
+</button>
+
+</div>
+
+<div class="simulation">
+
+<div id="result">
+
+Choose an attack above.
+
+</div>
+
+</div>
+
+<script>
+
+function phishing(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>🛡️ Phishing Attack</h2>
+
+Attacker
+<br>⬇️<br>
+
+Fake Email
+<br>⬇️<br>
+
+Victim
+<br>⬇️<br>
+
+Password Stolen
+
+<p>
+A fake email tricks users into revealing passwords.
+</p>
+`;
+
+}
+
+function dos(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>⚔️ DOS Attack</h2>
+
+Attacker
+<br>⬇️<br>
+
+Huge Traffic
+<br>⬇️<br>
+
+Server Crash
+
+<p>
+A single attacker floods a server with requests.
+</p>
+`;
+
+}
+
+function ddos(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>🔥 DDOS Attack</h2>
+
+Bot 1
+<br>
+
+Bot 2
+<br>
+
+Bot 3
+<br>
+
+⬇️
+
+Server Overloaded
+
+<p>
+Multiple systems attack a server simultaneously.
+</p>
+`;
+
+}
+
+function passwordAttack(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>🔐 Password Attack</h2>
+
+Attacker
+<br>⬇️<br>
+
+Weak Password
+<br>⬇️<br>
+
+Account Hacked
+
+<p>
+Weak passwords are easier to crack.
+</p>
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>

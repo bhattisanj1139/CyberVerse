@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Network Security Visualizer</title>
+
+<style>
+
+body{
+background:#050816;
+font-family:Arial;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+h1{
+color:cyan;
+text-shadow:0 0 15px cyan;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.buttons button{
+
+padding:12px 20px;
+margin:10px;
+
+background:cyan;
+
+border:none;
+
+font-size:16px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+border-radius:8px;
+
+}
+
+.buttons button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 15px cyan;
+
+}
+
+.visual-box{
+
+margin-top:40px;
+
+background:#111;
+
+padding:30px;
+
+border:2px solid cyan;
+
+border-radius:15px;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+#result{
+
+font-size:20px;
+
+line-height:2;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🌐 Network Security Visualizer</h1>
+
+<p>Select a Security Concept</p>
+
+<div class="buttons">
+
+<button onclick="firewall()">
+Firewall
+</button>
+
+<button onclick="vpn()">
+VPN
+</button>
+
+<button onclick="encryption()">
+Encryption
+</button>
+
+<button onclick="networkFlow()">
+Network Flow
+</button>
+
+</div>
+
+<div class="visual-box">
+
+<div id="result">
+
+Choose a concept above.
+
+</div>
+
+</div>
+
+<script>
+
+function firewall(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>🛡️ Firewall Protection</h2>
+
+Computer
+<br>⬇️<br>
+
+Firewall
+<br>⬇️<br>
+
+Internet
+
+<p>
+
+Firewall filters malicious traffic and blocks
+unauthorized access.
+
+</p>
+`;
+
+}
+
+function vpn(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>🔒 VPN Connection</h2>
+
+User
+<br>⬇️<br>
+
+Encrypted Tunnel
+<br>⬇️<br>
+
+VPN Server
+<br>⬇️<br>
+
+Internet
+
+<p>
+
+VPN hides IP address and encrypts data.
+
+</p>
+`;
+
+}
+
+function encryption(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>🔐 Data Encryption</h2>
+
+Plain Text
+<br>⬇️<br>
+
+Encryption
+<br>⬇️<br>
+
+Cipher Text
+<br>⬇️<br>
+
+Decryption
+
+<p>
+
+Encryption protects sensitive information.
+
+</p>
+`;
+
+}
+
+function networkFlow(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>🌐 Secure Network Flow</h2>
+
+Computer
+<br>⬇️<br>
+
+Router
+<br>⬇️<br>
+
+Firewall
+<br>⬇️<br>
+
+Server
+
+<p>
+
+Data passes through security layers before
+reaching the server.
+
+</p>
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>

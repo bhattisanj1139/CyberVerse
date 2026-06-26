@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Linux Security Lab</title>
+
+<style>
+
+body{
+background:#050816;
+font-family:Arial;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+h1{
+color:cyan;
+text-shadow:0 0 15px cyan;
+}
+
+.command-buttons{
+
+margin-top:30px;
+
+}
+
+.command-buttons button{
+
+padding:12px 20px;
+
+margin:10px;
+
+background:cyan;
+
+border:none;
+
+font-size:16px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+border-radius:8px;
+
+}
+
+.command-buttons button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 15px cyan;
+
+}
+
+.output-box{
+
+margin-top:40px;
+
+background:#111;
+
+padding:30px;
+
+border:2px solid cyan;
+
+border-radius:15px;
+
+max-width:900px;
+
+margin-left:auto;
+margin-right:auto;
+
+}
+
+#result{
+
+line-height:2;
+
+font-size:18px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🐧 Linux Security Lab</h1>
+
+<p>Select a Linux Command</p>
+
+<div class="command-buttons">
+
+<button onclick="pwdCmd()">pwd</button>
+
+<button onclick="lsCmd()">ls</button>
+
+<button onclick="cdCmd()">cd</button>
+
+<button onclick="chmodCmd()">chmod</button>
+
+<button onclick="pingCmd()">ping</button>
+
+<button onclick="netstatCmd()">netstat</button>
+
+</div>
+
+<div class="output-box">
+
+<div id="result">
+
+Select any command above.
+
+</div>
+
+</div>
+
+<script>
+
+function pwdCmd(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>pwd</h2>
+
+<b>Description:</b>
+Print current working directory.
+
+<br><br>
+
+<b>Example:</b>
+
+<pre>pwd</pre>
+
+<b>Output:</b>
+
+<pre>/home/user/Documents</pre>
+`;
+
+}
+
+function lsCmd(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>ls</h2>
+
+<b>Description:</b>
+Lists files and folders.
+
+<br><br>
+
+<b>Example:</b>
+
+<pre>ls</pre>
+
+<b>Output:</b>
+
+<pre>
+Documents
+Downloads
+Pictures
+Videos
+</pre>
+`;
+
+}
+
+function cdCmd(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>cd</h2>
+
+<b>Description:</b>
+Change directory.
+
+<br><br>
+
+<b>Example:</b>
+
+<pre>cd Documents</pre>
+
+<b>Output:</b>
+
+<pre>Moved to Documents folder</pre>
+`;
+
+}
+
+function chmodCmd(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>chmod</h2>
+
+<b>Description:</b>
+Changes file permissions.
+
+<br><br>
+
+<b>Example:</b>
+
+<pre>chmod 777 file.txt</pre>
+
+<b>Output:</b>
+
+<pre>Permissions Updated</pre>
+`;
+
+}
+
+function pingCmd(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>ping</h2>
+
+<b>Description:</b>
+Checks network connectivity.
+
+<br><br>
+
+<b>Example:</b>
+
+<pre>ping google.com</pre>
+
+<b>Output:</b>
+
+<pre>
+Reply from server...
+Connection Successful
+</pre>
+`;
+
+}
+
+function netstatCmd(){
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>netstat</h2>
+
+<b>Description:</b>
+Displays network connections.
+
+<br><br>
+
+<b>Example:</b>
+
+<pre>netstat</pre>
+
+<b>Output:</b>
+
+<pre>
+TCP Active Connections
+Port 80
+Port 443
+</pre>
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>
